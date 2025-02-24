@@ -1,0 +1,221 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  max-width: 100%;
+}
+
+.griditem {
+  color: #138d64;
+  background-color: white; 
+  height:max-content;
+  width:100%;
+  overflow: hidden;
+  border: 1px solid #138d64;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow:0 12px 24px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+.title{
+ font-size: larger;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:#138d64;
+  padding: 6px;
+}
+
+
+.keywords{
+  display: flex;
+  align-self:end;
+  align-items: center;
+}
+.year{
+  margin: 0;
+  text-align:left;
+  font-size:small;
+  font-style: italic;
+  align-self: flex-start;
+  margin: 5px;
+}
+
+.category{
+  font-size: smaller;
+  font-style: italic;
+  font-weight: 200;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #5d7b6f;
+  margin: 5px;
+}
+
+
+.subtitle{
+  font-style: italic;
+  font-size: smaller;
+  font-weight: 200;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  background-color: #5d7b6f;
+}
+.project-image{
+  max-width: fit-content;
+  max-height: 250px;
+  border-radius: 15px;
+  box-shadow:0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.project-image:hover{
+  transform: scale(1.5);
+  transition: transform 0.5s;
+}
+.project-details {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.project-details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-details ul li {
+  display: inline-block; /* Ensures tags are displayed inline */
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #5d7b6f;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+/* .project-details ul li:hover {
+  background-color: #fff;
+  color: #138d64;
+  border: 2px solid #138d64;
+} */
+
+.project-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-links button {
+  padding: 10px 14px;
+  border: 1px solid #138d64;
+  border-radius: 5px;
+  background-color: #138d64;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  font-size: 16px;
+}
+
+.project-links button:hover {
+  background-color: #fff;
+  color: #138d64;
+  border: 1px solid #138d64;
+}
+
+.project-links button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.conference-container {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin: 5px;
+}
+
+.conference-container p{
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style:italic;
+  color:#138d64;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 500
+}
+
+.description-container {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin: 10px;
+}
+
+.description-container p{
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  color:#138d64;
+  text-indent: 10px;
+}
+
+.description-container.collapsed {
+  max-height: 100px;
+}
+
+.description-container.expanded {
+  max-height: none;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  .description-container {
+    max-height: none; /* No limit on height for small screens */
+  }
+
+  .project-links button {
+    
+  .project-links {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #138d64;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    font-size: 16px;
+  }
+  }
+}
+
+.description-container p {
+  margin: 0;
+}
+
+/* Scrollbar styles */
+.griditem::-webkit-scrollbar {
+  text-decoration: none;
+}
+
+.griditem::-webkit-scrollbar-track {
+  text-decoration: none;
+}
+
+.griditem::-webkit-scrollbar-thumb {
+  text-decoration: none;
+}
+
+.griditem::-webkit-scrollbar-thumb:hover {
+text-decoration: none;
+}

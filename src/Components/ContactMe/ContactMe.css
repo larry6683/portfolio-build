@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  max-width: 100%;
+}
+
+
+.contactmeh2{
+  margin-bottom: 20px;
+  font-size: 35px;
+  color: #16a085;
+}
+
+form {
+  padding: 30px;
+  border-radius: 10px;
+}
+
+form .cont {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #16a085;
+  box-shadow: inset 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #999;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 45px;
+  background: #16a085;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #fff;
+  color: #16a085;
+  border: 2px solid #16a085;
+}
+
+@media (max-width: 768px) {
+  /* Add responsive styles here if needed */
+}

@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #f2f2f2;
+  max-width: 100%;
+  font-size: large;
+}
+
+.main {
+  width: 97%;
+  display: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 20px ;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow:0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.myprojectsh2 {
+  text-align: center;
+  margin: 10px;
+  color: #138d64;
+  font-size: 35px;
+}
+
+.angry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .angry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .angry-grid {
+    grid-template-columns: 1fr;
+  }
+}
