@@ -1,49 +1,37 @@
 import React, { useState } from "react";
 import NavBar from "./Components/NavBar/NavBar";
 import ContactMe from "./Components/ContactMe/ContactMe";
-import Homepage from "./Components/Homepage/Homepage";
-import Skills from "./Components/Skills/Skills";
 import MyProjects from "./Components/MyProjects/MyProjects";
 import About from "./Components/About/About";
-import "./App.css"; // Import global styles
+import "./App.css";
 
 const App = () => {
-  const [activeComponent, setActiveComponent] = useState("home"); // State to manage active component
+  const [activeComponent, setActiveComponent] = useState("about");
 
   const handleNavClick = (component) => {
     setActiveComponent(component);
   };
 
-  // Render different components based on activeComponent state
   const renderComponent = () => {
     switch (activeComponent) {
-      case "home":
-        return <Homepage />;
-      case "introduction":
+      case "about":
         return <About />;
-      case "skills":
-        return <Skills />;
       case "myprojects":
-        {
-          console.log("case");
-        }
         return <MyProjects />;
-
       case "contact":
-        return <ContactMe/>;
-
+        return <ContactMe />;
       default:
-        return <Homepage />;
+        return <About />;
     }
   };
 
   return (
     <div className="App">
-      <NavBar onNavClick={handleNavClick} /> {/* Pass handleNavClick as prop */}
+      <NavBar onNavClick={handleNavClick} />
       {renderComponent()}
       <footer className="footer">
-      <p>Larry6683.</p>
-    </footer>
+        <p>© 2025 - Sujith Battu</p>
+      </footer>
     </div>
   );
 };

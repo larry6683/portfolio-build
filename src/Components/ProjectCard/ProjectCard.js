@@ -1,80 +1,192 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./ProjectCard.css";
 
-const Project = ({ title, year,category,subtitle, skills, description,image,  codeLink, videoLink,reportLink,publicationLink,pptLink ,conference}) => {
-  const [isReadMore, setIsReadMore] = useState(true);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+const ProjectCard = ({
+  title,
+  year,
+  category,
+  type,
+  subtitle,
+  skills,
+  description,
+  image,
+  codeLink,
+  videoLink,
+  reportLink,
+  publicationLink,
+  pptLink,
+  conference,
+  conferenceShort,
+  publisher,
+  indexing,
+}) => {
+  const isPublication = type === "publication";
 
-  useEffect(() => {
-    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const toggleReadMore = () => setIsReadMore(!isReadMore);
-
-  return (
-    <div className="griditem">
-      <div className="keywords">
-        <div className="year">{year}</div>/
-      <div className="category">{category}</div>
-      </div>
-      <h3 className="title">{title}</h3>
-      <h5 className="subtitle">{subtitle}</h5>
-      {conference&& (
-          <div className="conference-container">
-              <p> {conference}</p>
-        </div>
-        )}
-      <img className='project-image' src={image} alt="Image missing"/>
-      <div className="project-details">
-        <ul className="tags">
-          {skills.map((skill, index) => (
-            <li key={index} className="tags">{skill}</li>
-          ))}
-        </ul>
-        <div className={`description-container ${isReadMore && !isSmallScreen ? 'collapsed' : 'expanded'}`}>
-          <p>{description}</p>
-        </div>
-        {/* {!isSmallScreen && description.length > 50 && (
-          <a href="#!" onClick={toggleReadMore}>
-            {isReadMore ? "Read More" : " Show Less"}
-          </a>
-        )} */}
-        {codeLink || videoLink || reportLink || publicationLink || pptLink? (
-          <div className="project-links">
-            {codeLink && (
-              <button>
-                <a href={codeLink} target="_blank" rel="noopener noreferrer">Code</a>
-              </button>
-            )}
-            {videoLink && (
-              <button>
-                <a href={videoLink} target="_blank" rel="noopener noreferrer">Video</a>
-              </button>
-            )}
-            {reportLink && (
-              <button>
-                <a href={reportLink} target="_blank" rel="noopener noreferrer">Report</a>
-              </button>
-            )}
-            {publicationLink && (
-              <button>
-                <a href={publicationLink} target="_blank" rel="noopener noreferrer">Publication</a>
-              </button>
-            )}
-            {pptLink && (
-              <button>
-                <a href={pptLink} target="_blank" rel="noopener noreferrer">PPT</a>
-              </button>
-            )}
-             
+  // Publication Card UI (Original Design)
+  if (isPublication) {
+    return (
+      <div className="project-card publication-card">
+        {/* Card Header */}
+        <div className="card-header">
+          <div className="card-badges">
+            <span className="year-badge">{year}</span>
+            <span className="type-badge publication">
+              📄 Publication
+            </span>
           </div>
-        ) : null}
+          {indexing && (
+            <div className="indexing-badge">{indexing}</div>
+          )}
+        </div>
+
+        {/* Card Image */}
+        <div className="card-image-container">
+          <img className="card-image" src={image} alt={title} />
+          <div className="image-overlay">
+            <span className="category-tag">{category}</span>
+          </div>
+        </div>
+
+        {/* Card Content */}
+        <div className="card-content">
+          <h3 className="card-title">{title}</h3>
+          <p className="card-subtitle">{subtitle}</p>
+
+          {/* Conference Info */}
+          {conference && (
+            <div className="conference-info">
+              <div className="conference-icon">🎓</div>
+              <div className="conference-details">
+                <div className="conference-name">{conferenceShort}</div>
+                <div className="conference-full">{conference}</div>
+                
+              </div>
+            </div>
+          )}
+
+          {/* Skills Tags */}
+          <div className="skills-tags">
+            {skills.slice(0, 6).map((skill, index) => (
+              <span key={index} className="skill-tag">
+                {skill}
+              </span>
+            ))}
+            {skills.length > 6 && (
+              <span className="skill-tag more-tag">+{skills.length - 6}</span>
+            )}
+          </div>
+
+          {/* Description */}
+          <p className="card-description">{description}</p>
+        </div>
+
+        {/* Card Footer with Links */}
+        <div className="card-footer">
+          {publicationLink && (
+            <a
+              href={publicationLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-link primary"
+            >
+              📖 View Publication
+            </a>
+          )}
+          {pptLink && (
+            <a
+              href={pptLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-link secondary"
+            >
+              📊 Presentation
+            </a>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // Academic Project Card UI (New Compact Design)
+  return (
+    <div className="project-card academic-card">
+      <div className="academic-header">
+        <div className="academic-icon">💻</div>
+        <div className="academic-meta">
+          <span className="academic-year">{year}</span>
+          <span className="academic-category">{category}</span>
+        </div>
+      </div>
+
+      <div className="academic-content">
+        <h3 className="academic-title">{title}</h3>
+        <p className="academic-subtitle">{subtitle}</p>
+        
+        <p className="academic-description">{description}</p>
+
+        {/* Skills */}
+        <div className="academic-skills">
+          {skills.map((skill, index) => (
+            <span key={index} className="academic-skill-tag">
+              {skill}
+            </span>
+          ))}
+        </div>
+
+        {/* Links */}
+        <div className="academic-links">
+          {codeLink && (
+            <a
+              href={codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="academic-link"
+              title="View Code"
+            >
+              <span className="link-icon">💻</span>
+              Code
+            </a>
+          )}
+          {reportLink && (
+            <a
+              href={reportLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="academic-link"
+              title="View Report"
+            >
+              <span className="link-icon">📄</span>
+              Report
+            </a>
+          )}
+          {pptLink && (
+            <a
+              href={pptLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="academic-link"
+              title="View Presentation"
+            >
+              <span className="link-icon">📊</span>
+              PPT
+            </a>
+          )}
+          {videoLink && (
+            <a
+              href={videoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="academic-link"
+              title="Watch Video"
+            >
+              <span className="link-icon">🎥</span>
+              Video
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Project;
+export default ProjectCard;

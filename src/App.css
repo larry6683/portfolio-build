@@ -2,3 +2,13 @@
   text-align: center;
 }
 
+.footer {
+  background-color: #f1f1f1;
+  border-top: 1px solid #0a5039;
+  padding: 9px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

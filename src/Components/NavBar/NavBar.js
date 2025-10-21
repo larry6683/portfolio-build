@@ -19,7 +19,7 @@ const NavBar = ({ onNavClick }) => {
     <div className="header">
       <div className="navbar">
       <div className="title-logo">
-      <div className="site-title">Sujith Battu's Portfolio</div>
+      <div className="site-title">PORTFOLIO</div>
       <div><img className="logo" src={Logo} alt="Clickable Image" href=""></img></div>
       </div>
         <div className="navbar-toggle" onClick={toggleMenu}>
@@ -28,21 +28,13 @@ const NavBar = ({ onNavClick }) => {
         <nav className={isActive ? "active" : "noactive"}>
           <ul>
             <li>
-              <button onClick={() => handleNavItemClick("home")}>Home</button>
-            </li>
-            <li>
               <button onClick={() => handleNavItemClick("introduction")}>
-                About Me
-              </button>
-            </li>
-            <li>
-              <button onClick={() => handleNavItemClick("skills")}>
-                Skills
+                About
               </button>
             </li>
             <li>
               <button onClick={() => handleNavItemClick("myprojects")}>
-                Projects
+                Publications/Projects
               </button>
             </li>
           </ul>
