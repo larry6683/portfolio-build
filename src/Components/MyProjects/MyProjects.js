@@ -96,7 +96,6 @@ const MyProjects = () => {
       skills: ["Information Visualization", "Excel", "Python"],
       description: "Learnt how to transform a bad chart into an effective one by following the principles of information visualization. Evaluated various real-world charts and redesigned them for better clarity and comprehension. Every After chart can be a Before chart again",
       image: images.project_5,
-      codeLink: "https://github.com/larry6683/ML_Project",
       pptLink:"https://docs.google.com/presentation/d/164wdxnZPTUkejKUaYwV2mRM14AcC2eIm/edit?usp=sharing&ouid=104511946301613108341&rtpof=true&sd=true",
     },
      {
