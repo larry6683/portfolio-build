@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-build/static/css/main.18d375e6.css",
-    "main.js": "/portfolio-build/static/js/main.244179b7.js",
+    "main.js": "/portfolio-build/static/js/main.ebc734b2.js",
     "static/media/profile.jpeg": "/portfolio-build/static/media/profile.51757b05a77aab2bf299.jpeg",
     "static/media/project_3.png": "/portfolio-build/static/media/project_3.ce69a0b7d0f009868e7e.png",
     "static/media/Sujith Battu CV.pdf": "/portfolio-build/static/media/Sujith Battu CV.b0618102139662406852.pdf",
@@ -11,10 +11,10 @@
     "static/media/logo.jpeg": "/portfolio-build/static/media/logo.f5a01124427a56a78002.jpeg",
     "index.html": "/portfolio-build/index.html",
     "main.18d375e6.css.map": "/portfolio-build/static/css/main.18d375e6.css.map",
-    "main.244179b7.js.map": "/portfolio-build/static/js/main.244179b7.js.map"
+    "main.ebc734b2.js.map": "/portfolio-build/static/js/main.ebc734b2.js.map"
   },
   "entrypoints": [
     "static/css/main.18d375e6.css",
-    "static/js/main.244179b7.js"
+    "static/js/main.ebc734b2.js"
   ]
 }
