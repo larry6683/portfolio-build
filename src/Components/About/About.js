@@ -197,6 +197,7 @@ function About() {
                     <span className="skill-badge">Jupyter</span>
                     <span className="skill-badge">ArcGIS</span>
                     <span className="skill-badge">GEE</span>
+                    <span className="skill-badge">PostGIS</span>
                   </div>
                 </div>
               </div>

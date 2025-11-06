@@ -857,6 +857,7 @@ body {
 
   .hero-description {
     max-width: 100%;
+    align-items: center;
   }
 
   .social-links {

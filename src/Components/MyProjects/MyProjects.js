@@ -72,7 +72,8 @@ const MyProjects = () => {
       skills: ["Machine Learning", "Decision Trees", "Random Forest", "Agriculture Analytics", "Python"],
       description: "Developed an intelligent crop recommendation decision-making system using machine learning algorithms to enable agricultural stakeholders to make the most suitable selection of crops, considering soil profiles, weather patterns, and other environmental conditions.",
       image: images.project_3,
-      codeLink: "https://github.com/larry6683/Data-Mining-Project",
+      codeLink: "https://github.com/larry6683/ML_Project",
+      reportLink:"https://ml-leml98nl2-sujithb6s-projects.vercel.app/"
     },
     {
       title: "GameVerse: Insights of Video Game Analysis",
@@ -85,9 +86,20 @@ const MyProjects = () => {
       image: images.project_3,
       codeLink: "https://github.com/larry6683/Data-Mining-Project",
       reportLink: "https://drive.google.com/file/d/1QKEbtejZsTwvLT-iJWprRZS8TxsoaZ7J/view?usp=sharing",
-      pptLink: "https://drive.google.com/file/d/1QnlSGiZECGyv26eDcgsFcMtmzx5Phokf/view?usp=sharing",
+     },
+     {
+      title: "Real World Chart Evaluation",
+      category: "Academic",
+      type: "presentation",
+      year: "2025",
+      subtitle: "InfoVIZ Project",
+      skills: ["Information Visualization", "Excel", "Python"],
+      description: "Learnt how to transform a bad chart into an effective one by following the principles of information visualization. Evaluated various real-world charts and redesigned them for better clarity and comprehension. Every After chart can be a Before chart again",
+      image: images.project_5,
+      codeLink: "https://github.com/larry6683/ML_Project",
+      pptLink:"https://docs.google.com/presentation/d/164wdxnZPTUkejKUaYwV2mRM14AcC2eIm/edit?usp=sharing&ouid=104511946301613108341&rtpof=true&sd=true",
     },
-    {
+     {
       title: "Deepfake Detection System using Neural Networks",
       category: "Academic",
       type: "project",
