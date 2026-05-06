@@ -13,7 +13,7 @@ import {
 function About() {
   const [jobTitle, setJobTitle] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const jobTitles = ["Strategic Data Analyst", "Data Scientist", "AI Researcher"];
+  const jobTitles = ["Spatial Data Analyst", "Data Scientist", "AI Researcher"];
 
   useEffect(() => {
     const updateJobTitle = () => {
