@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-build/static/css/main.18d375e6.css",
-    "main.js": "/portfolio-build/static/js/main.8f6d328d.js",
+    "main.js": "/portfolio-build/static/js/main.4b73876b.js",
     "static/media/profile.jpeg": "/portfolio-build/static/media/profile.51757b05a77aab2bf299.jpeg",
     "static/media/project_3.png": "/portfolio-build/static/media/project_3.ce69a0b7d0f009868e7e.png",
     "static/media/project_5.png": "/portfolio-build/static/media/project_5.188a2b1281cb617291ed.png",
@@ -9,13 +9,13 @@
     "static/media/project_2.png": "/portfolio-build/static/media/project_2.e5c75801242bb1a87ecf.png",
     "static/media/project_4.png": "/portfolio-build/static/media/project_4.c49c16447a5728f9507b.png",
     "static/media/logo.jpeg": "/portfolio-build/static/media/logo.f5a01124427a56a78002.jpeg",
-    "static/media/Sujith_Battu_Resume.pdf": "/portfolio-build/static/media/Sujith_Battu_Resume.4e1008f8db02d781c722.pdf",
+    "static/media/Sujith_Battu_CV.pdf": "/portfolio-build/static/media/Sujith_Battu_CV.3f634159e5c9869c84ac.pdf",
     "index.html": "/portfolio-build/index.html",
     "main.18d375e6.css.map": "/portfolio-build/static/css/main.18d375e6.css.map",
-    "main.8f6d328d.js.map": "/portfolio-build/static/js/main.8f6d328d.js.map"
+    "main.4b73876b.js.map": "/portfolio-build/static/js/main.4b73876b.js.map"
   },
   "entrypoints": [
     "static/css/main.18d375e6.css",
-    "static/js/main.8f6d328d.js"
+    "static/js/main.4b73876b.js"
   ]
 }
