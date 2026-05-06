@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import "./MyProjects.css";
 
+// Added project_5 import to prevent the application from crashing
 const images = {
   project_1: require("../../Images/project_1.png"),
   project_2: require("../../Images/project_2.png"),
   project_3: require("../../Images/project_3.png"),
   project_4: require("../../Images/project_4.png"),
+  project_5: require("../../Images/project_5.png"), 
 };
 
 const MyProjects = () => {
-  const [activeTab, setActiveTab] = useState("publications");
+  const [activeTab, setActiveTab] = useState("projects"); 
 
   const publications = [
     {
@@ -64,16 +66,48 @@ const MyProjects = () => {
 
   const projects = [
     {
-      title: "Crop Recommendation System based on Soil and Weather Properties",
+      title: "Smart Travel Planning Application using AI",
+      category: "Academic",
+      type: "project",
+      year: "2026",
+      subtitle: "Big Data & Full-Stack Development",
+      skills: ["Next.js", "Python FastAPI", "PostgreSQL", "GCP", "Terraform", "Docker", "CI/CD"],
+      description: "Engineered a scalable full-stack travel platform aggregating real-time metrics for flights, hotels, and weather. Built an AI chatbot to generate personalized itineraries, reducing planning time by 40%. Architected cloud infrastructure on GCP with automated CI/CD pipelines.",
+      image: images.project_2, 
+    },
+    {
+      title: "Registration Analytics Dashboard (Asan-te)",
       category: "Academic",
       type: "project",
       year: "2025",
-      subtitle: "Machine Learning Project",
-      skills: ["Machine Learning", "Decision Trees", "Random Forest", "Agriculture Analytics", "Python"],
-      description: "Developed an intelligent crop recommendation decision-making system using machine learning algorithms to enable agricultural stakeholders to make the most suitable selection of crops, considering soil profiles, weather patterns, and other environmental conditions.",
+      subtitle: "Capstone Project",
+      skills: ["Data Pipelines", "KPI Dashboards", "UUID Tracking", "Data Analytics"],
+      description: "Rebuilt a legacy analytics workflow with UUID-based tracking, pinpointing onboarding friction points to increase completion rates by 22%. Streamlined CSV reporting pipelines and formulated KPI dashboards, cutting manual reporting by 35%.",
+      image: images.project_4, 
+    },
+    {
+      title: "Crop Recommendation System - Machine Learning",
+      category: "Academic",
+      type: "project",
+      year: "2025",
+      subtitle: "Machine Learning & GIS",
+      skills: ["Machine Learning", "Decision Trees", "Random Forest", "GIS", "Python"],
+      description: "Trained ML models predicting optimal crops utilizing soil nutrients and climate parameters, achieving 98% accuracy. Spearheaded GIS-ready architecture for spatial crop suitability mapping and precision agriculture evaluation.",
       image: images.project_3,
       codeLink: "https://github.com/larry6683/ML_Project",
       reportLink:"https://ml-leml98nl2-sujithb6s-projects.vercel.app/"
+    },
+    {
+      title: "Real World Dashboard Evaluation",
+      category: "Academic",
+      type: "presentation",
+      year: "2025",
+      subtitle: "InfoVIZ Project",
+      skills: [ "Excel", "Power BI", "Data Analysis", "Dashboard Design"],
+      description: "Transformed bad charts into good charts by following the principles of information visualization. Evaluated various real-world charts. Designed a real world live dashboard for the Power BI project with stunning visuals.",
+      image: images.project_5,
+      pptLink:"https://docs.google.com/presentation/d/1G3evlC_CvDXkIRjP5HNIFzM2qb9gyS-3/edit?usp=sharing&ouid=104511946301613108341&rtpof=true&sd=true",
+      reportLink:"https://app.powerbi.com/groups/me/reports/4bd550c1-6b67-485b-9c04-5ff00e503332/5b9b7a2fc49d49d403fd?experience=power-bi",
     },
     {
       title: "GameVerse: Insights of Video Game Analysis",
@@ -81,25 +115,13 @@ const MyProjects = () => {
       type: "project",
       year: "2024",
       subtitle: "Data Mining Project",
-      skills: ["Tableau", "SteamDB", "Data Mining", "Association Rules", "CLIP Model", "NLP", "Review Analysis"],
+      skills: ["Tableau", "SteamDB", "Data Mining", "Association Rules", "NLP", "Review Analysis"],
       description: "This study presents comprehensive trends and patterns in the video game industry sourcing user reviews from SteamDB. Performed developer/publisher analysis, genre prediction, and sentiment analysis to understand gaming market dynamics.",
       image: images.project_3,
       codeLink: "https://github.com/larry6683/Data-Mining-Project",
       reportLink: "https://drive.google.com/file/d/1QKEbtejZsTwvLT-iJWprRZS8TxsoaZ7J/view?usp=sharing",
-     },
-     {
-      title: "Real World Dashboard Evaluation",
-      category: "Academic",
-      type: "presentation",
-      year: "2025",
-      subtitle: "InfoVIZ Project",
-      skills: [ "Excel", "Power BI", "Data Analysis", "Dashboard Design"],
-      description: "Transformed bad charts into good charts by following the principles of information visualization. Evaluated various real-world charts and Every After chart can be a Before chart again. Designed a real world live dashboard for the Power BI project with stunning visuals.",
-      image: images.project_5,
-      pptLink:"https://docs.google.com/presentation/d/1G3evlC_CvDXkIRjP5HNIFzM2qb9gyS-3/edit?usp=sharing&ouid=104511946301613108341&rtpof=true&sd=true",
-      reportLink:"https://app.powerbi.com/groups/me/reports/4bd550c1-6b67-485b-9c04-5ff00e503332/5b9b7a2fc49d49d403fd?experience=power-bi",
     },
-     {
+    {
       title: "Deepfake Detection System using Neural Networks",
       category: "Academic",
       type: "project",
@@ -128,14 +150,13 @@ const MyProjects = () => {
       skills: ["MERN Stack", "React", "Node.js", "MongoDB", "UI/UX Design", "Database Management"],
       description: "Developed a proper MERN stack Portfolio application with multiple features like dynamic placing and customization. Database management and UI/UX design principles were clearly addressed throughout the development process.",
       image: images.project_4,
-    },
+    }
   ];
-
 
   const getFilteredItems = () => {
     if (activeTab === "publications") return publications;
     if (activeTab === "projects") return projects;
-    return publications;
+    return projects; 
   };
 
   const filteredItems = getFilteredItems();
@@ -147,7 +168,7 @@ const MyProjects = () => {
         <div className="hero-content-projects">
           <h1 className="hero-title-projects">Publications & Projects</h1>
           <p className="hero-subtitle-projects">
-            Showcasing my research contributions and academic projects in Data Science, Medical Imaging, and Software Engineering
+            Showcasing my research contributions and academic projects in Data Science, Machine Learning, and Big Data
           </p>
         </div>
       </section>
@@ -156,20 +177,19 @@ const MyProjects = () => {
       <section className="filter-section">
         <div className="filter-container">
           <div className="filter-tabs">
-  
-            <button
-              className={`filter-tab ${activeTab === "publications" ? "active" : ""}`}
-              onClick={() => setActiveTab("publications")}
-            >
-              <span className="tab-icon">📄</span>
-              Research Publications ({publications.length})
-            </button>
             <button
               className={`filter-tab ${activeTab === "projects" ? "active" : ""}`}
               onClick={() => setActiveTab("projects")}
             >
               <span className="tab-icon">💻</span>
               Academic Projects ({projects.length})
+            </button>
+            <button
+              className={`filter-tab ${activeTab === "publications" ? "active" : ""}`}
+              onClick={() => setActiveTab("publications")}
+            >
+              <span className="tab-icon">📄</span>
+              Research Publications ({publications.length})
             </button>
           </div>
         </div>
@@ -209,14 +229,14 @@ const MyProjects = () => {
       <section className="stats-section">
         <div className="stats-container">
           <div className="stat-card">
+            <div className="stat-number">{projects.length}</div>
+            <div className="stat-label">Data Projects</div>
+            <div className="stat-detail">Machine Learning & Big Data</div>
+          </div>
+          <div className="stat-card">
             <div className="stat-number">{publications.length}</div>
             <div className="stat-label">Research Publications</div>
             <div className="stat-detail">Scopus & UGC Indexed</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">{projects.length}</div>
-            <div className="stat-label">Academic Projects</div>
-            <div className="stat-detail">Machine Learning & Web Dev</div>
           </div>
           <div className="stat-card">
             <div className="stat-number">2</div>

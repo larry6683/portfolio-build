@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
 import ProfileImage from "../../Images/profile.jpeg";
-import CV from "./Sujith Battu CV.pdf";
+import CV from "./Sujith_Battu_Resume.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -13,7 +13,7 @@ import {
 function About() {
   const [jobTitle, setJobTitle] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const jobTitles = ["Geospatial Research", "Remote Sensing Data", "Spatial Data Science"];
+  const jobTitles = ["Strategic Data Analyst", "Data Scientist", "AI Researcher"];
 
   useEffect(() => {
     const updateJobTitle = () => {
@@ -30,12 +30,12 @@ function About() {
   const downloadCV = () => {
     const link = document.createElement("a");
     link.href = CV;
-    link.download = "Battu Sujith Resume.pdf";
+    link.download = "Sujith_Battu_Resume.pdf";
     link.click();
   };
 
   const copyEmail = () => {
-    const email = "Sujith.Battu@colorado.edu";
+    const email = "battusujith2525@gmail.com";
     navigator.clipboard.writeText(email).then(() => {
       alert("Email address copied to clipboard");
     });
@@ -50,8 +50,8 @@ function About() {
             <div className="hello">Hi, I am</div>
             <h1 className="hero-name">Sujith Battu</h1>
             <div className="hero-title">{jobTitle}</div>
-            <p className="hero-description">
-              Master's student in Data Science at CU Boulder, aspiring to pursue a PhD in Geography with specialization in GIS, Remote Sensing, and Spatial Analytics.
+            <p className="hero-description" style={{ maxWidth: "100%", wordWrap: "break-word" }}>
+              Strategic Data Analyst and Master's student in Data Science at CU Boulder. I specialize in analyzing large datasets, building end-to-end data pipelines, and translating data into clear visualizations to optimize business processes.
             </p>
 
             <div className="hero-actions">
@@ -64,7 +64,7 @@ function About() {
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-                <a href="mailto:Sujith.Battu@colorado.edu" title="Email">
+                <a href="mailto:battusujith2525@gmail.com" title="Email">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </a>
                 <a
@@ -107,10 +107,10 @@ function About() {
             <div className="intro-card">
               <div className="card-icon">🎓</div>
               <p>
-                I am a passionate researcher with a strong foundation in software engineering and over a year of research experience in <span className="highlight">Medical Imaging and Disease Detection Systems</span>. I am now channeling my expertise toward <span className="highlight">Geospatial Technologies</span>.
+                I am a passionate data professional with a strong foundation in software engineering and research experience in <span className="highlight">Machine Learning and Cloud Data Pipelines</span>. 
               </p>
               <p>
-                My goal is to leverage spatial data science to address critical challenges in environmental monitoring, urban planning, and sustainable development through advanced GIS and remote sensing techniques.
+                My goal is to leverage advanced data analytics, big data technologies, and spatial analytics (GIS) to address critical business challenges and drive data-driven decision-making.
               </p>
             </div>
           </div>
@@ -118,28 +118,28 @@ function About() {
           {/* Research Interests */}
           <div className="interests-container">
             <h3 className="subsection-title">
-              <span className="title-icon">🔬</span> Research Interests
+              <span className="title-icon">🔬</span> Core Competencies
             </h3>
             <div className="interests-grid">
               <div className="interest-card">
-                <div className="interest-icon">🌍</div>
-                <h4>GIS & Remote Sensing</h4>
-                <p>Spatial data analysis, satellite imagery processing, and environmental monitoring</p>
-              </div>
-              <div className="interest-card">
                 <div className="interest-icon">📊</div>
-                <h4>Spatial Analytics</h4>
-                <p>Geospatial modeling, urban planning, and location intelligence</p>
+                <h4>Data Analytics & BI</h4>
+                <p>Translating complex data into actionable KPI dashboards and visualizations.</p>
               </div>
               <div className="interest-card">
-                <div className="interest-icon">🏥</div>
-                <h4>Medical Imaging</h4>
-                <p>Deep learning for disease detection and diagnostic systems</p>
+                <div className="interest-icon">☁️</div>
+                <h4>Big Data & Cloud</h4>
+                <p>Architecting scalable data pipelines using AWS, GCP, Kafka, and Docker.</p>
               </div>
               <div className="interest-card">
-                <div className="interest-icon">💻</div>
-                <h4>Web Applications</h4>
-                <p>Full-stack development, databases, and cloud technologies</p>
+                <div className="interest-icon">🧠</div>
+                <h4>Machine Learning</h4>
+                <p>Developing predictive models, deep learning networks, and AI chatbots.</p>
+              </div>
+              <div className="interest-card">
+                <div className="interest-icon">🌍</div>
+                <h4>GIS & Spatial Analytics</h4>
+                <p>ESRI Certified in spatial data analysis and geographic mapping.</p>
               </div>
             </div>
           </div>
@@ -150,54 +150,54 @@ function About() {
       <section className="skills-section">
         <div className="section-container">
           <div className="section-header">
-            <h2 className="section-title">Skills</h2>
+            <h2 className="section-title">Technical Skills</h2>
             <div className="title-underline"></div>
           </div>
 
           <div className="skills-content">
-            {/* Technical Skills */}
             <div className="skill-category">
               <div className="skill-items">
                 <div className="skill-item">
                   <div className="skill-name">
-                    <strong>Programming</strong>
+                    <strong>Programming & Databases</strong>
                   </div>
                   <div className="skill-tags">
                     <span className="skill-badge">Python</span>
+                    <span className="skill-badge">SQL (PostgreSQL)</span>
                     <span className="skill-badge">R</span>
-                    <span className="skill-badge">SQL</span>
+                    <span className="skill-badge">JavaScript</span>
                   </div>
                 </div>
 
                 <div className="skill-item">
                   <div className="skill-name">
-                    <strong>Technologies</strong>
+                    <strong>Data Analysis & Machine Learning</strong>
                   </div>
                   <div className="skill-tags">
-                    <span className="skill-badge">Data Wrangling & Visualisation</span>
-                    <span className="skill-badge">Remote Sensing</span>
-                    <span className="skill-badge">Machine Learning</span>
-                    <span className="skill-badge">EDA</span>
-                    <span className="skill-badge">API's</span>
-                    <span className="skill-badge">TensorFlow</span>
-                    <span className="skill-badge">Numpy</span>
                     <span className="skill-badge">Pandas</span>
+                    <span className="skill-badge">NumPy</span>
+                    <span className="skill-badge">Scikit-learn</span>
+                    <span className="skill-badge">PySpark</span>
                     <span className="skill-badge">Matplotlib</span>
-                    <span className="skill-badge">Spatial Analytics</span>
+                    <span className="skill-badge">Seaborn</span>
+                    <span className="skill-badge">Excel</span>
                   </div>
                 </div>
 
                 <div className="skill-item">
                   <div className="skill-name">
-                    <strong>Developer Tools</strong>
+                    <strong>Big Data, Cloud & Tools</strong>
                   </div>
                   <div className="skill-tags">
-                    <span className="skill-badge">Git</span>
-                    <span className="skill-badge">VSCode</span>
-                    <span className="skill-badge">Jupyter</span>
+                    <span className="skill-badge">AWS (EC2, S3)</span>
+                    <span className="skill-badge">GCP</span>
+                    <span className="skill-badge">Kafka</span>
+                    <span className="skill-badge">Docker</span>
+                    <span className="skill-badge">Redis</span>
+                    <span className="skill-badge">Power BI</span>
+                    <span className="skill-badge">Tableau</span>
+                    <span className="skill-badge">GA4</span>
                     <span className="skill-badge">ArcGIS</span>
-                    <span className="skill-badge">GEE</span>
-                    <span className="skill-badge">PostGIS</span>
                   </div>
                 </div>
               </div>
@@ -209,106 +209,95 @@ function About() {
       {/* Education & Experience Section */}
       <section className="credentials-section">
         <div className="section-container">
-          <div className="credentials-grid">
-            {/* Education */}
-            <div className="credential-block">
+          {/* Changed grid layout via inline flexbox to expand Experience width */}
+          <div className="credentials-grid" style={{ display: "flex", flexWrap: "wrap", gap: "2rem" }}>
+            
+            {/* Education Block - 35% width */}
+            <div className="credential-block" style={{ flex: "1 1 35%" }}>
               <div className="block-header">
                 <span className="header-icon">🎓</span>
                 <h3>Education</h3>
               </div>
 
-              <div className="timeline">
-                <div className="timeline-item">
-                  <div className="timeline-marker"></div>
-                  <div className="timeline-content">
-                    <div className="content-header">
-                      <h4>Master's in Data Science</h4>
-                      <span className="year-badge">2024 - Present</span>
-                    </div>
-                    <p className="institution">University of Colorado Boulder</p>
-                    <div className="detail-item">
-                      <span className="label">GPA:</span>
-                      <span className="value">3.60/4.0</span>
-                    </div>
-                    <div className="tags-container">
-                      <strong>Coursework:</strong>
-                      <div className="tags">
-                        <span>Statistics</span>
-                        <span>Machine Learning</span>
-                        <span>GIS</span>
-                        <span>Info Visualization</span>
-                        <span>Data Ethics</span>
-                        <span>Data Mining</span>
-                      </div>
-                    </div>
+              {/* Removed timeline classes, using list format instead to remove the line */}
+              <div className="experience-list">
+                <div className="experience-item" style={{ marginBottom: "1.5rem" }}>
+                  <div className="content-header">
+                    <h4>Master's in Data Science</h4>
+                    <span className="duration-badge">Aug 2024 - May 2026</span>
+                  </div>
+                  <p className="company">University of Colorado Boulder</p>
+                  <div className="detail-item" style={{ marginTop: "0.5rem" }}>
+                    <span className="label">GPA: </span>
+                    <span className="value">3.75/4.00</span>
                   </div>
                 </div>
 
-                <div className="timeline-item">
-                  <div className="timeline-marker"></div>
-                  <div className="timeline-content">
-                    <div className="content-header">
-                      <h4>Bachelor of Technology</h4>
-                      <span className="year-badge">2020 - 2024</span>
-                    </div>
-                    <p className="institution">Delhi Technological University</p>
-                    <p className="department">Software Engineering</p>
-                    <div className="detail-item">
-                      <span className="label">GPA:</span>
-                      <span className="value">3.70/4.0</span>
-                    </div>
+                <div className="experience-item">
+                  <div className="content-header">
+                    <h4>Bachelor of Engineering</h4>
+                    <span className="duration-badge">Aug 2020 - Jun 2024</span>
+                  </div>
+                  <p className="company">Delhi Technological University</p>
+                  <p className="department" style={{ fontSize: "0.9rem", color: "var(--text-secondary)", marginTop: "0.2rem" }}>
+                    Software Engineering
+                  </p>
+                  <div className="detail-item" style={{ marginTop: "0.5rem" }}>
+                    <span className="label">GPA: </span>
+                    <span className="value">3.70/4.00</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Experience */}
-            <div className="credential-block">
+            {/* Experience Block - 60% width */}
+            <div className="credential-block" style={{ flex: "1 1 60%" }}>
               <div className="block-header">
                 <span className="header-icon">💼</span>
-                <h3>Experience</h3>
+                <h3>Professional Experience</h3>
               </div>
 
               <div className="experience-list">
                 <div className="experience-item">
                   <div className="content-header">
-                    <h4>Data Intern</h4>
-                    <span className="duration-badge">May - Aug 2025</span>
+                    <h4>Data Analyst Intern - Marketing</h4>
+                    <span className="duration-badge">May 2025 - Aug 2025</span>
                   </div>
-                  <p className="company">DMEConnected, Boulder, USA</p>
+                  <p className="company">DME Connected, Atlanta, USA</p>
                   <ul className="bullet-list">
-                    <li>Assisted CEO and marketing team in pricing strategy through data analysis</li>
-                    <li>Analyzed search patterns to identify high-demand products</li>
-                    <li>Created visualizations for stakeholders and investors</li>
+                    <li>Evaluated 10,000+ patient search requests by synthesizing EHR records using Python, Pandas, and SQL, increasing sales by 40%.</li>
+                    <li>Unified marketing metrics using LinkedIn Sales Navigator, Apollo, and HubSpot, improving lead identification by 25%.</li>
+                    <li>Constructed automated scraping pipelines, designed Power BI dashboards, and performed GA4 mapping, lifting conversions by 18%.</li>
+                  </ul>
+                </div>
+
+                <div className="experience-item">
+                  <div className="content-header">
+                    <h4>AI Researcher - Image Processing</h4>
+                    <span className="duration-badge">Aug 2023 - May 2024</span>
+                  </div>
+                  <p className="company">Delhi Technological University, India</p>
+                  <ul className="bullet-list">
+                    <li>Processed 5,000+ MRI images using Python, OpenCV, and NumPy for monkeypox detection.</li>
+                    <li>Achieved 97% accuracy with research published in Scopus-indexed IEEE conferences.</li>
+                    <li>Executed deep learning model assessments, reducing false negatives by 15%.</li>
                   </ul>
                 </div>
 
                 <div className="experience-item">
                   <div className="content-header">
                     <h4>Research Trainee</h4>
-                    <span className="duration-badge">June - July 2023</span>
+                    <span className="duration-badge">Jun 2023 - Jul 2023</span>
                   </div>
-                  <p className="company">CAIR, Defence Research Organisation, India</p>
+                  <p className="company">CAIR, Defence Research & Development Organisation</p>
                   <ul className="bullet-list">
-                    <li>Researched vehicle automation using LIDAR, ROS & Autoware</li>
-                    <li>Worked in Intelligence, Surveillance & Reconnaissance division</li>
-                  </ul>
-                </div>
-
-                <div className="experience-item">
-                  <div className="content-header">
-                    <h4>Research Assistant</h4>
-                    <span className="duration-badge">June 2023 - Feb 2024</span>
-                  </div>
-                  <p className="company">Delhi Technological University</p>
-                  <ul className="bullet-list">
-                    <li>Developed deep learning models for monkeypox detection</li>
-                    <li>Achieved best accuracy among 30 research papers</li>
-                    <li>Published 2 papers in IEEE and AIP conferences</li>
+                    <li>Researched vehicle automation using LIDAR, ROS & Autoware.</li>
+                    <li>Worked in the Intelligence, Surveillance & Reconnaissance division.</li>
                   </ul>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -317,7 +306,7 @@ function About() {
       <section className="cta-section">
         <div className="cta-content">
           <p>
-            <em>I am always eager to learn new technologies and take on challenging research projects. Feel free to browse through my portfolio and let's connect to explore collaboration opportunities!</em>
+            <em>I am always eager to learn new technologies and take on challenging data projects. Feel free to browse through my portfolio and let's connect!</em>
           </p>
         </div>
       </section>
