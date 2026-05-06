@@ -122,16 +122,6 @@ const MyProjects = () => {
       reportLink: "https://drive.google.com/file/d/1QKEbtejZsTwvLT-iJWprRZS8TxsoaZ7J/view?usp=sharing",
     },
     {
-      title: "Deepfake Detection System using Neural Networks",
-      category: "Academic",
-      type: "project",
-      year: "2023",
-      subtitle: "Deep Learning Project",
-      skills: ["CNN", "Deep Learning", "Computer Vision", "TensorFlow", "Image Classification"],
-      description: "Built a comprehensive deepfake detection application using Convolutional Neural Networks to detect deepfake images which are rapidly spreading online. Implemented transfer learning techniques for improved accuracy.",
-      image: images.project_1,
-    },
-    {
       title: "University Application Manager",
       category: "Academic",
       type: "project",

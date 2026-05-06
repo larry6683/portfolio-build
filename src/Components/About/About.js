@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
 import ProfileImage from "../../Images/profile.jpeg";
-import CV from "./Sujith_Battu_Resume.pdf";
+import CV from "./Sujith_Battu_CV.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -30,7 +30,7 @@ function About() {
   const downloadCV = () => {
     const link = document.createElement("a");
     link.href = CV;
-    link.download = "Sujith_Battu_Resume.pdf";
+    link.download = "Sujith_Battu_CV.pdf";
     link.click();
   };
 
@@ -286,10 +286,10 @@ function About() {
 
                 <div className="experience-item">
                   <div className="content-header">
-                    <h4>Research Trainee</h4>
+                    <h4>Research & Development Trainee</h4>
                     <span className="duration-badge">Jun 2023 - Jul 2023</span>
                   </div>
-                  <p className="company">CAIR, Defence Research & Development Organisation</p>
+                  <p className="company">Centre for Artificial Intelligence & Robotics, DRDO</p>
                   <ul className="bullet-list">
                     <li>Researched vehicle automation using LIDAR, ROS & Autoware.</li>
                     <li>Worked in the Intelligence, Surveillance & Reconnaissance division.</li>
