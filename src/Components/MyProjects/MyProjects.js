@@ -76,7 +76,7 @@ const MyProjects = () => {
       image: images.project_2, 
     },
     {
-      title: "Registration Analytics Dashboard (Asan-te)",
+      title: "Funnel Analytics for Asan-te (Captsone)",
       category: "Academic",
       type: "project",
       year: "2025",
