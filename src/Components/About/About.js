@@ -51,7 +51,7 @@ function About() {
             <h1 className="hero-name">Sujith Battu</h1>
             <div className="hero-title">{jobTitle}</div>
             <p className="hero-description" style={{ maxWidth: "100%", wordWrap: "break-word" }}>
-              Strategic Data Analyst and Master's student in Data Science at CU Boulder. I specialize in analyzing large datasets, building end-to-end data pipelines, and translating data into clear visualizations to optimize business processes.
+              Strategic Data Scientist and Master's student in Data Science at CU Boulder. I specialize in analyzing large datasets, building end-to-end data pipelines, and translating data into clear visualizations to optimize business processes.
             </p>
 
             <div className="hero-actions">
