@@ -10,10 +10,11 @@ import {
   faCopy,
 } from "@fortawesome/free-solid-svg-icons";
 
+const jobTitles = ["Spatial Data Analyst", "Data Scientist", "AI Researcher"];
+
 function About() {
   const [jobTitle, setJobTitle] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const jobTitles = ["Spatial Data Analyst", "Data Scientist", "AI Researcher"];
 
   useEffect(() => {
     const updateJobTitle = () => {
@@ -25,7 +26,7 @@ function About() {
 
     updateJobTitle();
     return () => clearTimeout();
-  }, [currentIndex]);
+  }, [currentIndex, jobTitles]);
 
   const downloadCV = () => {
     const link = document.createElement("a");
