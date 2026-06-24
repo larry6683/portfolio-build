@@ -6,10 +6,14 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Stage 2: Serve the app with Nginx
-FROM nginx:alpine
-# Copy the static build files to Nginx's default HTML folder
-COPY --from=build /app/build /usr/share/nginx/html
-# Expose port 80 for the PaaS routing
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Stage 2: Serve the optimized build
+FROM node:18-alpine
+WORKDIR /app
+# Install the lightweight 'serve' package
+RUN npm install -g serve
+# Copy only the built assets from Stage 1
+COPY --from=build /app/build ./build
+
+# 'serve' automatically detects the $PORT variable provided by Miget
+# The '-s' flag ensures React Router works correctly if you add multiple pages
+CMD ["serve", "-s", "build"]
