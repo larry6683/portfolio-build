@@ -20,7 +20,7 @@ const NavBar = ({ onNavClick }) => {
       <div className="navbar">
       <div className="title-logo">
       <div className="site-title">PORTFOLIO</div>
-      <div><img className="logo" src={Logo} alt="Clickable Image" href=""></img></div>
+      <div><img className="logo" src={Logo} alt="Clickable logo" href=""></img></div>
       </div>
         <div className="navbar-toggle" onClick={toggleMenu}>
         {isActive ? "✖" : "☰"}
